@@ -2,33 +2,31 @@
 
 namespace LearnDotNet.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class User : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "DCandidates",
+                name: "Users",
                 columns: table => new
                 {
-                    id = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FullName = table.Column<string>(nullable: true),
-                    Mobile = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    Age = table.Column<int>(nullable: false),
-                    BloodGroup = table.Column<string>(nullable: true),
-                    Address = table.Column<string>(nullable: true)
+                    Age = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DCandidates", x => x.id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DCandidates");
+                name: "Users");
         }
     }
 }

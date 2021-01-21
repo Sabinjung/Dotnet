@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LearnDotNet\\LearnDotNet\\LearnDotNet.csproj": {}
+    "E:\\MyProjects\\CRUDDOTNET\\LearnDotNet\\LearnDotNet.csproj": {}
   },
   "projects": {
-    "C:\\LearnDotNet\\LearnDotNet\\LearnDotNet.csproj": {
+    "E:\\MyProjects\\CRUDDOTNET\\LearnDotNet\\LearnDotNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LearnDotNet\\LearnDotNet\\LearnDotNet.csproj",
+        "projectUniqueName": "E:\\MyProjects\\CRUDDOTNET\\LearnDotNet\\LearnDotNet.csproj",
         "projectName": "LearnDotNet",
-        "projectPath": "C:\\LearnDotNet\\LearnDotNet\\LearnDotNet.csproj",
-        "packagesPath": "C:\\Users\\sabin\\.nuget\\packages\\",
-        "outputPath": "C:\\LearnDotNet\\LearnDotNet\\obj\\",
+        "projectPath": "E:\\MyProjects\\CRUDDOTNET\\LearnDotNet\\LearnDotNet.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "E:\\MyProjects\\CRUDDOTNET\\LearnDotNet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sabin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +41,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -54,6 +56,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "NETCore.MailKit": {
+              "target": "Package",
+              "version": "[2.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.0, )"
             }
           },
           "imports": [
@@ -74,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

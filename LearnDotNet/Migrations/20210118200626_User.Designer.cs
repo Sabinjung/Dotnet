@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LearnDotNet.Migrations
 {
-    [DbContext(typeof(DonationDBContext))]
-    [Migration("20201001222524_InitailSetup")]
-    partial class InitailSetup
+    [DbContext(typeof(CrudDBContext))]
+    [Migration("20210118200626_User")]
+    partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,34 +20,28 @@ namespace LearnDotNet.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("LearnDotNet.Models.DCandidate", b =>
+            modelBuilder.Entity("LearnDotNet.Models.User", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Age")
                         .HasColumnType("int");
-
-                    b.Property<string>("BloodGroup")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Mobile")
+                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.ToTable("DCandidates");
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }
