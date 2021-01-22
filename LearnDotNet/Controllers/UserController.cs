@@ -68,8 +68,25 @@ namespace LearnDotNet.Controllers
             return Ok("User Added Successfully");
         }
 
+        [HttpPut]
+
+        public async Task<ActionResult> UpdateUser([FromBody] GetUserDto input)
+        {
+            var user = DbContext.Users.Where(x => x.Id == input.Id).FirstOrDefault();
+            if(user == null)
+            {
+                return NotFound("User Not Found");
+            }
+            user.FirstName = input.FirstName;
+            user.LastName = input.LastName;
+            user.Age = input.Age;
+            user.Email = input.Email;
+            await DbContext.SaveChangesAsync();
+            return Ok("User Updated Successfully.");
+        }
+
         [HttpDelete("{Id}")]
-        public async Task<ActionResult> DeleteUser(int Id)
+        public async Task<ActionResult> DeleteUser(int Id) 
         {
             var user = DbContext.Users.Where(x => x.Id == Id).FirstOrDefault();
             if (user == null)
